@@ -11,6 +11,7 @@ docker run --network tknet \
   -v "${current_dir}"/empty-gif-module/log:/var/log/nginx \
   -v "${current_dir}"/empty-gif-module/www:/usr/share/nginx/html:ro \
   --name nginx-empty-gif \
+  -e TZ="Asia/Shanghai" \
   -d \
   nginx
 
