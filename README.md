@@ -13,3 +13,11 @@ such as:
 
 such as:
 `make gif`
+
+
+## Log
+
+default log directory: `log`
+
+such as: 
+`empty-gif-module/log`
