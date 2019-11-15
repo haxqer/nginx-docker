@@ -5,8 +5,8 @@ help:
 
 
 gif:
-	@./empty-gif-module/start-empty-gif-nginx-8081.sh
+	@./start-empty-gif-nginx-8081.sh
 
 gif-tk:
-	@./empty-gif-module/start-empty-gif-nginx-traefik.sh
+	@./start-empty-gif-nginx-traefik.sh
 
