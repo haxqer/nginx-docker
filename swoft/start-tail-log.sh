@@ -1,0 +1,16 @@
+#!/bin/bash
+
+current_dir=$(pwd)
+docker_container_name="tail-log-swoft-tk"
+
+docker stop ${docker_container_name}        >/dev/null 2>&1
+docker rm ${docker_container_name}          >/dev/null 2>&1
+docker network create tknet                 >/dev/null 2>&1
+
+docker run -d \
+  --network tknet \
+  -v "${current_dir}"/log:/tailon \
+  --name ${docker_container_name} \
+  gvalkov/tailon \
+  /tailon/*.log
+
