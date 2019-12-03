@@ -8,6 +8,7 @@ docker rm ${docker_container_name}          >/dev/null 2>&1
 docker network create tknet                 >/dev/null 2>&1
 
 docker run -d \
+  -p 18080:8080 \
   --network tknet \
   -v "${current_dir}"/log:/tailon \
   --name ${docker_container_name} \
